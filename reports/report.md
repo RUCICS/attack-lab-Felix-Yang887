@@ -5,8 +5,8 @@
 
 ### Problem 1: 
 - **分析**：
-1. ![](./imgs/11.png)
-因为strcpy的目的地址在rdi,所以缓冲区起始地址是`rbp-0x8`。
+1. 因为strcpy的目的地址在rdi,所以缓冲区起始地址是`rbp-0x8`。
+![](./imgs/11.png)
 
 2. 在x86-64中，func函数的返回地址位于`rbp+0x8`,所以从缓冲区到返回地址是16bytes，用`padding = b"A" * 16`覆盖这16bytes。
 
